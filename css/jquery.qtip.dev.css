@@ -1,0 +1,152 @@
+/*
+* qTip2 - Pretty powerful tooltips
+* http://craigsworks.com/projects/qtip2/
+*
+* Version: nightly
+* Copyright 2009-2010 Craig Michael Thompson - http://craigsworks.com
+*
+* Dual licensed under MIT or GPLv2 licenses
+*   http://en.wikipedia.org/wiki/MIT_License
+*   http://en.wikipedia.org/wiki/GNU_General_Public_License
+*
+* Date: Wed Jan 25 15:59:10.0000000000 2012
+*/
+
+/* Fluid class for determining actual width in IE */
+.ui-tooltip-fluid{
+	display: block;
+	visibility: hidden;
+	position: static !important;
+	float: left !important;
+}
+
+/* Core Stuff */
+.ui-tooltip-content{
+	position: relative;
+	overflow: hidden;
+	text-align: left;
+	word-wrap: break-word;
+}
+
+/* Modal plugin */
+#qtip-overlay{
+	position: fixed;
+	left: -10000em;
+	top: -10000em;
+}
+
+	/* Applied to modals with show.modal.blur set to true */
+	#qtip-overlay.blurs{ cursor: pointer; }
+
+	/* Change opacity of overlay here */
+	#qtip-overlay div{
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+
+		background-color: black;
+
+		opacity: 0.7;
+		filter:alpha(opacity=70);
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	}
+
+/* PKMN qTip CSS */
+.pkmn-tooltip {
+	position: fixed;
+	left: -28000px;
+	top: -28000px;
+	display: none;
+	
+	max-width: none;
+	min-width: none;
+	
+	-moz-box-shadow: rgba(0,0,0,1) 0 3px 30px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 3px 30px;
+	-khtml-box-shadow: rgba(0,0,0,1) 0 3px 30px;
+	box-shadow: rgba(0,0,0,1) 0 3px 30px;
+}
+
+.pkmn-tooltip .ui-tooltip-titlebar,
+.pkmn-tooltip .ui-tooltip-content {
+	filter: progid:DXImageTransform.Microsoft.Shadow(Color='gray', Direction=135, Strength=3);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Color='gray', Direction=135, Strength=3)";
+	_margin-bottom: -3px; /* IE6 */
+	.margin-bottom: -3px; /* IE7 */
+}
+
+.pkmn-tooltip .ui-tooltip-content {
+	background-color: #FFF;
+	font: normal normal normal 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	color: #000;
+	padding: 20px;
+	border: none;
+}
+
+/* Ajax Loading Graphic */
+.pkmn-loader {
+	position: relative;
+	top: 1px;
+	margin: -4px 0 0px 1px;	
+}
+
+/* Card Scan */
+.pkmn-scan {
+	float: left;
+	margin: 0 20px 0 0;
+	line-height: 0;
+}
+.pkmn-scan a:hover {
+	cursor: -webkit-zoom-in;
+	cursor: -moz-zoom-in;
+}
+.pkmn-scan img {
+	padding: 0;
+	margin: 0;
+	border: 0;	
+}
+
+/* Card Content */
+.pkmn-card-content {
+	float: right;
+	width: 298px;
+}
+.pkmn-card-content p {
+	font: normal normal normal 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	margin: 0 0 15px;
+}
+.pkmn-card-content h4 {
+	font: normal normal bold 19px/19px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	margin: 20px 0 15px;
+}
+.pkmn-card-content a {
+	color: #C00;
+	text-decoration: none;
+}
+.pkmn-card-content a:hover {
+	color: #C00;
+	text-decoration: underline !important;
+}
+.pkmn-card-specs {
+	margin-top: 0px !important;
+}
+.pkmn-scan-credit {
+	font-size: 11px !important;
+	margin: -2px 0 0 !important;
+}
+.pkmn-scan-credit a {
+	color: #000;
+}
+.pkmn-scan-credit a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+/* Scan Link */
+.scan-link {
+
+}
+.scan-link:hover {
+	cursor:-webkit-zoom-in;
+	cursor:-moz-zoom-in
+}
